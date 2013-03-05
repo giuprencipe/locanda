@@ -218,7 +218,8 @@ div .image_slot{
     background-color: rgba(255,255,255,0.7);
     border-radius: 7px;
     -webkit-box-shadow:0px 0px 10px #333333;  
-
+    display:inline-block;
+    margin:10px;
 }
 
 
