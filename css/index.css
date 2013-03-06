@@ -10,27 +10,34 @@
 
 body {
     background-color:#d1c5a7;
+    display: none;
 }
 
-div .invisible {
+.invisible {
 	display:none;
 }
 
-div .visible {
+.visible {
 	display:block !important;
 }
 
-div .back {
+
+/****************** struttura base *********************/
+
+.back{
     width:900px;
     height:700px;
-    background-color:white;
-    border: 1px solid red;
     margin-right:auto;
     margin-left:auto;
     margin-top:auto;
 }
 
-div .central {
+/***************************************/
+
+
+/****************** struttura centrale *********************/
+
+.central {
     width:850px;
     height:580px;
     margin-right:auto;
@@ -54,7 +61,7 @@ div .central {
     -webkit-border-radius: 8px;
 }
 
-div .back-image {
+.back-image {
     width:850px;
     height:580px;
     /*background-image: url("../images/home.jpg");*/
@@ -62,7 +69,7 @@ div .back-image {
     background-position:center;
 }
 
-div .central-text {
+.central-text {
     position:relative;
     width:280px;
     height:580px;
@@ -83,7 +90,7 @@ div .central-text {
     -webkit-box-shadow:0px 0px 8px #222222;
 }
 
-div .logo {
+.logo {
     width:275px;
     height:200px;
     border:1px solid lime;
@@ -91,7 +98,7 @@ div .logo {
     
     
 }
-div .message {
+.message {
     width:260px;
     font-size:15px;
     padding:8px;
@@ -99,90 +106,67 @@ div .message {
     font-family:antiqua;
     
 }
+/***************************************/
 
 
-div .menu {
+
+/****************** classi menu *********************/
+
+.menu {
     height: 50px;
     width: 850px;
     margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
 }
 
-div .menu-button {
+.menu-button {
     height: 43px;
-    width: 120px;
-    float:left;
     margin-left:80px;
     text-align:center;
     vertical-align:middle;
     font-family:quirlycues;
     font-size:36px;
-    -moz-border-radius: 8px; 
-    -webkit-border-radius: 8px;
     font-weight:900;
     color:#615842;
+    border-radius: 8px;
+    padding:10px;
+    cursor: pointer;
+    display: inline-block;
+
     
-    border-bottom:2px solid #615842;
-    
-/*    
-    text-shadow: #615842 2px 2px 2px;
-    -moz-box-shadow: 0px 0px 10px #333333;
-    -webkit-box-shadow:0px 0px 10px #333333;
-    background-color:#8C8365;*/
-    /*background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0.18, rgb(207,207,207)),
-        color-stop(0.72, rgb(245,245,245))
-    );
-    background-image: -moz-linear-gradient(
-        center bottom,
-        rgb(207,207,207) 18%,
-        rgb(245,245,245) 72%
-    );*/
 }
 
-div .menu-button:hover {
-    height: 43px;
-    width: 120px;
-    float:left;
+.menu-button:hover {
+/*    float:left;
     margin-left:80px;
-    margin-top:-5px;
     text-align:center;
     vertical-align:middle;
     font-family:quirlycues;
     font-size:36px;
-    -moz-border-radius: 8px; 
-    -webkit-border-radius: 8px;
-    font-weight:900;
+    font-weight:900;*/
     color:#817862;
-    
-    border-bottom:2px solid #817862;
-    cursor:pointer;
+    background-color: rgba(255,255,255,0.5); 
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-div .menu-button:active {
-    height: 43px;
-    width: 120px;
-    float:left;
-    margin-left:80px;
-    margin-top:-5px;
-    text-align:center;
-    vertical-align:middle;
-    font-family:quirlycues;
-    font-size:36px;
-    -moz-border-radius: 8px; 
-    -webkit-border-radius: 8px;
-    font-weight:900;
-    color:#312812;
-    
-    border-bottom:2px solid #312812;
-    cursor:pointer;
+.menu-button:active {
+    background-color: rgba(255,255,255,0.5); 
+    color:#512f1c;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5), 0px 0px 10px 0px rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5),0px 0px 10px 0px rgba(255, 255, 255, 0.7);
 }
 
-div .map {
+/****************** *********************/
+
+
+
+
+
+
+
+
+.map {
     position:absolute;
     width:0px;
     height:310px;
@@ -206,14 +190,14 @@ div .map {
     -webkit-border-radius: 8px 0px 0px 8px;
 }
 
-div .map iframe {
+.map iframe {
     margin-left:10px;
     margin-top:5px;
     display:none;
 }
 
 
-div .image_slot{
+.image_slot{
     padding:7px;
     background-color: rgba(255,255,255,0.7);
     border-radius: 7px;
@@ -223,11 +207,11 @@ div .image_slot{
 }
 
 
-div .galleryTitle{
+.galleryTitle{
     text-align:center;
 }
 
-div .back_gallery{
+.back_gallery{
     background-color: #505050;
     width: 819px;
     height: 546px;
@@ -236,4 +220,14 @@ div .back_gallery{
     font-weight: bold;
     color:gray;
     text-shadow: 0px 1px 1px 0px white, 0px -1px 1px 0px black;
+}
+
+.galleryBox{
+    display:none;
+    position:absolute;
+    padding:30px;
+    width:819px;
+    height:486px;
+    top:23px;
+    overflow:auto
 }
