@@ -54,61 +54,36 @@
 */
 
 
-jQuery(document).ready(function(){   
-    /*precaricamento immagini background*/
-    var imageList = ["images/info.jpg","images/contacts.jpg"];
-    preloadBackgroudImage(imageList);
-    
-    /*costruzione della struttura base della pagina con il gruppo centrale e il menu*/
-    buildBaseStructure();
+/*nome_sezione=[html_text,url_background_image]    */
 
-    var sections = ["home","proposte","galleria","conatatti"]
-    buildPageSection(sections)
+text_home = "La Locanda del Torrione sorge tra le mura più antiche della città di Manfredonia, in quelle che un tempo delimitavano la città Svevo-Angioina.<br>\
+        Nasce con lo scopo di offrire ai suoi clienti un ambiente semplice e famigliare dove trascorrere pranzi, cene e feste: nel pomeriggio si possono gustare \
+        sfiziosi aperitivi sulla terrazzina del locale, che nel periodo estivo viene allestita anche per altre ore della giornata, offrendo il servizio TV Sky HD. <br>\
+        La cucina richiama le tipicità, i profumi e le tradizioni del Gargano: speriamo di incontrarvi presto per un gustoso incontro!"
 
-    $('body').fadeIn('slow');  
-
-});
-
-
-
-
-function buildBaseStructure(){
-    /*metodo che costruisce il div principale che fa da contenitore agli altri div*/
-
-    var central_div = jQuery("<div id='central' class='central'></div>");
-    var menu = jQuery("<div id='menu' class='menu'></div>");
-
-    var back_div = jQuery("<div id='back' class='back'></div>");
-    back_div.append(central_div);
-    back_div.append(menu);
-
-    jQuery("body").append(back_div);
-}
-
-function preloadBackgroudImage(imageList){
-    /*metodo che precarica tutte le immagini di background della pagina*/
-    if (document.images){
-        var immagine1= new Image();
-        immagine1.src="images/home.jpg";
-        var immagine2= new Image();
-        immagine2.src="images/contacts.jpg";
-        var immagine3= new Image();
-        immagine3.src="images/menu.jpg";
-    }
-}
+text_proposte = "La Locanda del Torrione è aperta a pranzo e a cena: i piatti variano con la stagione ed in base alle proposte dello chef. \
+                    Si offrono menù turistici con prezzi competitivi ma senza rinunciare alla qualità e alla genuinità dei prodotti tipici \
+                    del Gargano: tra le nostre specialità troviamo gli antipasti di terra assortiti che raccolgono il meglio della tradizione locale. <br/>\
+                    A 'La Locanda del Torrione' si organizzano feste, cerimonie, serate a tema, pranzi e cene di lavoro: lo staff è a completa disposizione \
+                    del cliente per soddisfare tutte le sue esigenze e studiare menù per tutte le occasioni. <br/> \
+                    Per ogni informazione sulle specialità, organizzazione di feste e prenotazioni, visita la scheda 'Contatti'."
+                    
+                    
+text_contatti = "<b style='font-size:15px'>La Locanda <br /> del Torrione s.n.c. <br />\
+                    di Bottalico Gianpio <br />\
+                    e Triventi Matteo</b><br />\
+                    Via delle Antiche Mura, 74/A<br />\
+                    Manfredonia (FG)<br /><br />\
+                    Per prenotazioni e informazioni si prega di contattare telefonicamente:<br />\
+                    Gianpio : 349-5713372<br />\
+                    Matteo : 340-4996077<br /><br />\
+                    <center>Orari di apertura:<br/>\
+                    10:00-15:30 / 17:30-01:00<br />\
+                    (Lunedì chiuso)<br />"
+                    
+sections["home"] = [text_home,"images/sfondi_sezioni/home.jpg"];
+sections["proposte"] = [text_proposte,"images/sfondi_sezioni/proposte.jpg"];
+sections["galleria"] = [null,null];
+sections["contatti"] = [text_contatti,"images/sfondi_sezioni/contatti.jpg"];
 
 
-function buildPageSection(sections){
-    var menu = jQuery("#menu")
-    var central_div = jQuery("#central")
-    for (var i=0;i<sections.length;i++){
-            var menu_button = jQuery("<div class='menu-button' id='"+sections[i]+"' onClick='caricaContenuti(this)'></div>");
-            var label_button = jQuery("<span>"+capitalise(sections[i])+"</span>")
-            menu.append(menu_button.append(label_button));
-    }
-}
-
-
-function capitalise(string){
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}

@@ -62,11 +62,9 @@ body {
 }
 
 .back-image {
-    width:850px;
-    height:580px;
-    /*background-image: url("../images/home.jpg");*/
     background-repeat: no-repeat;
-    background-position:center;
+    background-position:center center;
+    background-size:850px 580px;
 }
 
 .central-text {
@@ -115,35 +113,25 @@ body {
 .menu {
     height: 50px;
     width: 850px;
-    margin-top: 25px;
     text-align: center;
 }
 
 .menu-button {
-    height: 43px;
-    margin-left:80px;
+    margin:25px;
     text-align:center;
     vertical-align:middle;
     font-family:quirlycues;
     font-size:36px;
-    font-weight:900;
+    font-weight:bold;
+    text-shadow: 0px 2px 1px white,0px -2px 1px black;
     color:#615842;
     border-radius: 8px;
-    padding:10px;
     cursor: pointer;
+    padding:15px;
     display: inline-block;
-
-    
 }
 
 .menu-button:hover {
-/*    float:left;
-    margin-left:80px;
-    text-align:center;
-    vertical-align:middle;
-    font-family:quirlycues;
-    font-size:36px;
-    font-weight:900;*/
     color:#817862;
     background-color: rgba(255,255,255,0.5); 
     -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
