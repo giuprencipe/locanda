@@ -43,8 +43,8 @@ body {
     margin-right:auto;
     margin-left:auto;
     margin-top:auto;
-    -moz-box-shadow: 0px 0px 10px #333333;
-    -webkit-box-shadow:0px 0px 10px #333333;  
+/*    -moz-box-shadow: 0px 0px 10px #333333;
+    -webkit-box-shadow:0px 0px 10px #333333;  */
     background-image: -webkit-gradient(
         linear,
         left bottom,
@@ -60,15 +60,27 @@ body {
     -moz-border-radius: 8px; 
     -webkit-border-radius: 8px;
 }
+/**********************************************************/
 
+
+
+
+/*******************    IMMAGINE DI SFONDO  ***************************/
 .back-image {
+    position:absolute;
+    padding: 10px;
+    width: 830px;
+    height: 560px;
     background-repeat: no-repeat;
     background-position:center center;
-    background-size:850px 580px;
+    background-size:830px 560px;
 }
 
-.central-text {
-    position:relative;
+
+
+/****************************************************************************/
+.vertical-strip {
+    position:absolute;
     width:280px;
     height:580px;
     margin-left:50px;
@@ -84,8 +96,8 @@ body {
         rgba(230,230,230,0.90) 4%,
         rgba(255,255,255,0.90) 52%
     );
-    -moz-box-shadow: 0px 0px 8px #222222;
-    -webkit-box-shadow:0px 0px 8px #222222;
+/*    -moz-box-shadow: 0px 0px 8px #222222;
+    -webkit-box-shadow:0px 0px 8px #222222;*/
 }
 
 .logo {
@@ -129,22 +141,39 @@ body {
     cursor: pointer;
     padding:15px;
     display: inline-block;
+    border:1px solid rgba(0,0,0,0);
 }
-
 .menu-button:hover {
-    color:#817862;
-    background-color: rgba(255,255,255,0.5); 
-    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-}
-
-.menu-button:active {
-    background-color: rgba(255,255,255,0.5); 
+    background-color: rgba(255,255,255,0.3); 
     color:#512f1c;
-    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5), 0px 0px 10px 0px rgba(255, 255, 255, 0.7);
-    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5),0px 0px 10px 0px rgba(255, 255, 255, 0.7);
+    border:1px solid white;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.7);
+}
+.menu-button:active {
+    border:1px solid gray;
+    color:#512f1c;
+    background-color: rgba(255,255,255,0.3); 
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 1);
 }
 
+
+.menu-button-selected {
+    margin:25px;
+    text-align:center;
+    vertical-align:middle;
+    font-family:quirlycues;
+    font-size:36px;
+    font-weight:bold;
+    text-shadow: 0px 2px 1px white,0px -2px 1px black;
+    border-radius: 8px;
+    cursor: pointer;
+    padding:15px;
+    display: inline-block;
+    background-color: rgba(255,255,255,0.3); 
+    color:#512f1c;
+    border:1px solid white;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.7);
+}
 /****************** *********************/
 
 
