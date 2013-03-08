@@ -8,10 +8,13 @@ $(document).ready(function() { /*precaricamento immagini background*/
 
     /*costruzione della struttura base della pagina con il gruppo centrale e il menu*/
     buildBaseStructure();
-    buildPageSections()
+    buildPageSections();
 
     $('body').fadeIn('slow');
-});
+    
+    var end_event = jQuery.Event("end");
+    $(document).trigger(end_event);
+})
 
 
 
@@ -64,29 +67,28 @@ function buildPageSections() {
 
         /*creazione del div contenente l'immagine di sfondo centrale e dell'area contenente la spegazione della sezione*/
         if (sections[sectionId][1]) {
-            back_image = $("<div id='image_" + sectionId + "' class='back-image'></div>");
+            back_image = $("<div id='back_" + sectionId + "' class='back-wall'></div>");
             back_image.css("background-image", "url('images/sfondi_sezioni/" + sectionId + ".jpg')");
-            content_of_section.append(back_image);
+            content_of_section.append(back_image);            
             
-            var vertical_strip = $("<div id='strip_"+sectionId+"' class='vertical-strip effect-my'></div>");
+            var vertical_strip = $("<div id='strip_"+sectionId+"' class='vertical-strip' effect-my'></div>");
+            var logo = $("<div class='logo'></div>")
+            var text = $("<div id='text_"+sectionId+"' class='section-message'>"+sections[sectionId][0]+"</div>")
+            vertical_strip.append(logo);
+            vertical_strip.append(text);
             content_of_section.append(vertical_strip);
         }else{
-            back_image = $("<div id='image_" + sectionId + "' class='back-image-"+sectionId+"'></div>");
-            content_of_section.append(back_image);
-            
-            var vertical_strip = $("<div id='strip_"+sectionId+"' class='vertical-strip-"+sectionId+" effect-my'></div>");
-            content_of_section.append(vertical_strip);
+            back = $("<div id='back_" + sectionId + "' class='back-wall'></div>");
+            custom_content = $("<div id='content_"+sectionId+"' class='back-wall-"+sectionId+"'></div>")
+            back.append(custom_content);
+            content_of_section.append(back);            
         }
-        
-        
-        
-        
-        
         
         /*selezione del primo elemento del menu*/
         if (first){
             content_of_section.css("display","block");
             menu_button.addClass("menu-button-selected");
+            section_visible = sectionId
             first = false;
         }else{
             content_of_section.css("display","none");

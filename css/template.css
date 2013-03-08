@@ -66,7 +66,7 @@ body {
 
 
 /*******************    IMMAGINE DI SFONDO  ***************************/
-.back-image {
+.back-wall {
     position:absolute;
     padding: 10px;
     width: 830px;
@@ -84,18 +84,20 @@ body {
     width:280px;
     height:580px;
     margin-left:50px;
+    background-image: linear-gradient(left bottom, rgb(219,219,219) 0%, rgb(255,255,255) 57%);
+    background-image: -o-linear-gradient(left bottom, rgb(219,219,219) 0%, rgb(255,255,255) 57%);
+    background-image: -moz-linear-gradient(left bottom, rgb(219,219,219) 0%, rgb(255,255,255) 57%);
+    background-image: -webkit-linear-gradient(left bottom, rgb(219,219,219) 0%, rgb(255,255,255) 57%);
+    background-image: -ms-linear-gradient(left bottom, rgb(219,219,219) 0%, rgb(255,255,255) 57%);
+
     background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0.04, rgba(230,230,230,0.90)),
-        color-stop(0.52, rgba(255,255,255,0.90))
+    	linear,
+    	left bottom,
+    	right top,
+    	color-stop(0, rgb(219,219,219)),
+    	color-stop(0.57, rgb(255,255,255))
     );
-    background-image: -moz-linear-gradient(
-        center bottom,
-        rgba(230,230,230,0.90) 4%,
-        rgba(255,255,255,0.90) 52%
-    );
+
 /*    -moz-box-shadow: 0px 0px 8px #222222;
     -webkit-box-shadow:0px 0px 8px #222222;*/
 }
@@ -108,12 +110,14 @@ body {
     
     
 }
-.message {
+.section-message {
     width:260px;
     font-size:15px;
     padding:8px;
     text-align:justify;
     font-family:antiqua;
+    color:#707070;
+    text-shadow: 0px 1px 1px white,0px -1px 1px #505050;
     
 }
 /***************************************/
@@ -175,76 +179,3 @@ body {
     box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.7);
 }
 /****************** *********************/
-
-
-
-
-
-
-
-
-.map {
-    position:absolute;
-    width:0px;
-    height:310px;
-    margin-left:850px;
-    top:135px;
-    background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0.04, rgb(230,230,230)),
-        color-stop(0.52, rgb(255,255,255))
-    );
-    background-image: -moz-linear-gradient(
-        center bottom,
-        rgb(230,230,230) 4%,
-        rgb(255,255,255) 52%
-    );
-    -moz-box-shadow: 0px 0px 8px #222222;
-    -webkit-box-shadow:0px 0px 8px #222222;
-    -moz-border-radius: 8px 0px; 
-    -webkit-border-radius: 8px 0px 0px 8px;
-}
-
-.map iframe {
-    margin-left:10px;
-    margin-top:5px;
-    display:none;
-}
-
-
-.image_slot{
-    padding:7px;
-    background-color: rgba(255,255,255,0.7);
-    border-radius: 7px;
-    -webkit-box-shadow:0px 0px 10px #333333;  
-    display:inline-block;
-    margin:10px;
-}
-
-
-.galleryTitle{
-    text-align:center;
-}
-
-.back_gallery{
-    background-color: #505050;
-    width: 819px;
-    height: 546px;
-    top:30%;
-    font-size: 40pt;
-    font-weight: bold;
-    color:gray;
-    text-shadow: 0px 1px 1px 0px white, 0px -1px 1px 0px black;
-}
-
-.galleryBox{
-    display:none;
-    position:absolute;
-    padding:30px;
-    width:819px;
-    height:486px;
-    top:23px;
-    overflow:auto
-}

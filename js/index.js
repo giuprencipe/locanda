@@ -87,3 +87,39 @@ sections["galleria"] = [null,null];
 sections["contatti"] = [text_contatti,"images/sfondi_sezioni/contatti.jpg"];
 
 
+// $('#galleria').live("create",function() {
+//    // perform selector on $(this) to apply class   
+//    debugger;
+// });
+
+
+$(document).bind("end",function(){
+    var galleria = $("#content_galleria");
+    images = ["image-1.jpg","image-2.jpg","image-3.jpg","image-4.jpg","image-5.jpg","image-6.jpg","image-2.jpg","image-3.jpg","image-4.jpg","image-1.jpg","image-2.jpg"];
+    createImageSlot(galleria, images);
+});
+
+
+function setPrefixImage(pathImage){
+    return "images/gallery/"+pathImage
+}
+
+
+function createImageSlot(container, images){
+    for (i in images){
+        var image = images[i];
+        var thumb_src = "thumb-"+image;
+        
+        var slot = $("<div class='image-slot'></div>");
+        image = setPrefixImage(image)
+        var linked_image = $("<a href='"+image+"' rel='lightbox[custom]'  style='opacity:1'></a>")
+        thumb_src = setPrefixImage(thumb_src)
+        
+        var thumb = $("<div class='container-thumb'></div>")
+        thumb.css("background","url("+thumb_src+") no-repeat center center")
+        
+        linked_image.append(thumb)
+        slot.append(linked_image)
+        container.append(slot)
+    }
+}
