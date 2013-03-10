@@ -68,7 +68,6 @@ text_proposte = "La Locanda del Torrione è aperta a pranzo e a cena: i piatti v
                     del cliente per soddisfare tutte le sue esigenze e studiare menù per tutte le occasioni. <br/> \
                     Per ogni informazione sulle specialità, organizzazione di feste e prenotazioni, visita la scheda 'Contatti'."
                     
-                    
 text_contatti = "<b style='font-size:15px'>La Locanda <br /> del Torrione s.n.c. <br />\
                     di Bottalico Gianpio <br />\
                     e Triventi Matteo</b><br />\
@@ -86,7 +85,6 @@ sections["proposte"] = [text_proposte,"images/sfondi_sezioni/proposte.jpg"];
 sections["galleria"] = [null,null];
 sections["contatti"] = [text_contatti,"images/sfondi_sezioni/contatti.jpg"];
 
-
 // $('#galleria').live("create",function() {
 //    // perform selector on $(this) to apply class   
 //    debugger;
@@ -97,6 +95,12 @@ $(document).bind("end",function(){
     var galleria = $("#content_galleria");
     images = ["image-1.jpg","image-2.jpg","image-3.jpg","image-4.jpg","image-5.jpg","image-6.jpg","image-2.jpg","image-3.jpg","image-4.jpg","image-1.jpg","image-2.jpg"];
     createImageSlot(galleria, images);
+    
+    
+    addSocial();
+    
+    addMap()
+    
 });
 
 
@@ -123,3 +127,45 @@ function createImageSlot(container, images){
         container.append(slot)
     }
 }
+
+
+
+function addSocial(){
+    var div_container = $("<div id='social' class='social'></div>")
+    var label = $("<div id='social_label' class='social_label'>Social</div>")
+    var link = $("<div id='social_link' class='social_link'></div>")
+    
+    link.append("<a href='https://www.facebook.com/lalocanda.deltorrione' target='_blanck' style='text-decoration:none;'><div class='link_element'>f</div></a>")
+    
+    div_container.append(link)
+    div_container.append(label)
+    $("body").append(div_container)
+    
+    $('#social_label').click(function(){
+        var left_pox = $("#social").css("left");
+        if  (left_pox == "-5px"){
+            $("#social").animate({
+                left: "-86px"
+            }, 500 );
+        }else{
+            $("#social").animate({
+                left: "-5px"
+            }, 500 );
+        }
+    });
+}
+
+
+function addMap(){
+    
+    var iframe_map = '<iframe width="385" height="380" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?f=q&amp;source=s_q&amp;hl=it&amp;geocode=&amp;q=locanda+del+torrione+manfredonia&amp;aq=&amp;sll=43.328526,13.050911&amp;sspn=2.453435,5.718384&amp;t=m&amp;ie=UTF8&amp;hq=locanda+del+torrione&amp;hnear=Manfredonia,+Foggia,+Puglia&amp;ll=41.63368,15.91404&amp;spn=0.006094,0.008283&amp;z=16&amp;output=embed"></iframe>'
+    var contatti = $("#back_contatti")
+    var map_container = $("<div id='map_container' class='map_container'></div>")
+    var map = $("<div id='map' class='map'></div>")
+    contatti.append(map_container.append(map.append(iframe_map)));
+    
+    
+    var text_contatti = $("#text_contatti");
+    text_contatti.append('<div title="Visualizza mappa ingrandita" style="text-align:center;margin-left:40%;margin-top:10px"><a target="_blanck" href="https://maps.google.it/maps?f=q&amp;source=embed&amp;hl=it&amp;geocode=&amp;q=locandadeltorrione+manfredonia&amp;aq=&amp;sll=43.328526,13.050911&amp;sspn=2.453435,5.718384&amp;ie=UTF8&amp;hq=locandadeltorrione&amp;hnear=Manfredonia,+Foggia,+Puglia&amp;ll=41.631108,15.917405&amp;spn=0.006295,0.006295&amp;t=h"><div class="map_link"></div></a></div>')
+}
+

@@ -1,34 +1,3 @@
-.map {
-    position:absolute;
-    width:0px;
-    height:310px;
-    margin-left:850px;
-    top:135px;
-    background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0.04, rgb(230,230,230)),
-        color-stop(0.52, rgb(255,255,255))
-    );
-    background-image: -moz-linear-gradient(
-        center bottom,
-        rgb(230,230,230) 4%,
-        rgb(255,255,255) 52%
-    );
-    -moz-box-shadow: 0px 0px 8px #222222;
-    -webkit-box-shadow:0px 0px 8px #222222;
-    -moz-border-radius: 8px 0px; 
-    -webkit-border-radius: 8px 0px 0px 8px;
-}
-
-.map iframe {
-    margin-left:10px;
-    margin-top:5px;
-    display:none;
-}
-
-
 .image-slot{
     padding:7px;
     background-color: rgba(255,255,255,0.7);
@@ -45,7 +14,7 @@
     border-radius: 5px;
     width:120px;
     height:120px;
-    background-size:100px 100px;
+    background-size:120px 120px;
 }
 
 .imgLiquid img{
@@ -62,3 +31,139 @@
 
 }
 
+.social{
+    float:left;
+    position:fixed;
+    top:25%;
+    left:-86px;
+}
+
+.social_label{
+    border-radius:8px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    
+    display:inline-block;
+    color: rgb(110,0,0);
+    padding:10px;
+    padding-left:30px;
+    padding-right:30px;
+    font-size:12pt;
+    text-align:center;
+    vertical-align:middle;
+    -webkit-transform: rotate(-90deg);  
+    -moz-transform: rotate(-90deg);  
+    -o-transform: rotate(-90deg); 
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); 
+    
+    
+    background-image: linear-gradient(top, rgb(158,29,29) 0%, rgb(171,44,44) 100%);
+    background-image: -o-linear-gradient(top, rgb(158,29,29) 0%, rgb(171,44,44) 100%);
+    background-image: -moz-linear-gradient(top, rgb(158,29,29) 0%, rgb(171,44,44) 100%);
+    background-image: -webkit-linear-gradient(top, rgb(158,29,29) 0%, rgb(171,44,44) 100%);
+    background-image: -ms-linear-gradient(top, rgb(158,29,29) 0%, rgb(171,44,44) 100%);
+
+    background-image: -webkit-gradient(
+    	linear,
+    	right top,
+    	right bottom,
+    	color-stop(0, rgb(158,29,29)),
+    	color-stop(1, rgb(171,44,44))
+    );
+    
+    cursor:pointer;
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
+    text-shadow: 0px 1px 1px #d00;
+    font-weight:bold;
+    
+    
+}
+
+.social_link{
+    display: inline-block;
+    width: 85px;
+    height: 200px;
+    margin-right: -38px;
+    margin-bottom: -100px;
+    border-radius:8px;
+    background-color:#871818;
+    box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.6);
+    
+}
+
+
+.link_element{
+    padding:10px;
+    margin-left:20px;
+    font-size:40pt;
+    font-weight:bold;
+    text-shadow: 0px 1px 1px #b00,0px -1px 1px #300;
+    color: #108;
+    cursor:pointer;
+}
+
+.link_element:hover{
+    color: #20d;
+/*    text-shadow: 0px 0px 5px rgba(255,255,255,0.5);
+*/}
+
+
+.map_container{
+    position:absolute;
+    width:405px;
+    height:400px;
+    left:52%;
+    top:14%;
+}
+
+
+.map{
+    padding:10px;
+    border-radius: 8px;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.04, rgb(230,230,230)),
+        color-stop(0.52, rgb(255,255,255))
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        rgb(230,230,230) 4%,
+        rgb(255,255,255) 52%
+    );
+}
+
+.map iframe{
+    box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.map_link{
+    width:48px;
+    height:48px;
+    background:url(../images/map.jpg) no-repeat center center;
+    background-size:48px 48px;
+    
+}
+
+
+/*@-webkit-keyframes schift{
+    from {left:-50px}
+    to {left:0px}
+}
+
+@keyframes schift{
+    from {left:-50px}
+    to {left:0px}
+}
+
+@-moz-keyframes schift{
+    from {left:-50px}
+    to {left:0px}
+}
+
+.schift_animation{
+    animation:opacity 1s 1;
+    -moz-animation:opacity 1s 1;
+    -webkit-animation:opacity 1s 1;
+}*/

@@ -43,8 +43,6 @@ body {
     margin-right:auto;
     margin-left:auto;
     margin-top:auto;
-/*    -moz-box-shadow: 0px 0px 10px #333333;
-    -webkit-box-shadow:0px 0px 10px #333333;  */
     background-image: -webkit-gradient(
         linear,
         left bottom,
@@ -89,7 +87,7 @@ body {
     background-image: -moz-linear-gradient(left bottom, rgb(219,219,219) 0%, rgb(255,255,255) 57%);
     background-image: -webkit-linear-gradient(left bottom, rgb(219,219,219) 0%, rgb(255,255,255) 57%);
     background-image: -ms-linear-gradient(left bottom, rgb(219,219,219) 0%, rgb(255,255,255) 57%);
-
+    
     background-image: -webkit-gradient(
     	linear,
     	left bottom,
@@ -97,7 +95,7 @@ body {
     	color-stop(0, rgb(219,219,219)),
     	color-stop(0.57, rgb(255,255,255))
     );
-
+    opacity:0.95;
 /*    -moz-box-shadow: 0px 0px 8px #222222;
     -webkit-box-shadow:0px 0px 8px #222222;*/
 }
